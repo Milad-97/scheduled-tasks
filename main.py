@@ -29,9 +29,9 @@ if today_tuple in birthdays_dict:
         contents = contents.replace("[NAME]", birthday_person["name"])
 
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
-        smtpserver.ehlo()
+        connection.ehlo()
         connection.starttls()
-        smtpserver.ehlo()
+        connection.ehlo()
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
