@@ -14,13 +14,7 @@ import os
 
 # import os and use it to get the Github repository secrets
 MY_EMAIL = "general1497.j@gmail.com"
-MY_PASSWORD = os.getenv('MY_PASSWORD')
-
-if MY_PASSWORD is not None:
-    print("API Key successfully loaded.")
-    # Use the api_key in your application logic (e.g., connecting to a service)
-else:
-    print("Error: API Key environment variable not found.")
+MY_PASSWORD = os.environ['MYPASS']
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
