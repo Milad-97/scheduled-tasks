@@ -14,7 +14,7 @@ import os
 
 # import os and use it to get the Github repository secrets
 MY_EMAIL = "general1497.j@gmail.com"
-MY_PASSWORD = ""
+MY_PASSWORD = os.environ.get('MYPASS')
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
